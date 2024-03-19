@@ -47,7 +47,7 @@ def samplePaths(paths, density=10, drop_endpoints=False, n_min_path=5):
     edges_dict = {}
     for id, p in paths.items():
         indeces = np.linspace(0, len(p)-1, int(len(p)/density)+1)
-        indeces = indeces.astype(np.int)
+        indeces = indeces.astype(np.int_)
         p_new = [pp for i, pp in enumerate(p) if i in indeces]
         
         if drop_endpoints:
